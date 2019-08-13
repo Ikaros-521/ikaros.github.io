@@ -1,0 +1,81 @@
+﻿body{
+    background: url("img/6.png");
+    background-size: 100%;
+    overflow: hidden;
+}
+
+#a{
+    position:fixed;left:6%;top:36%;
+}
+
+ul #li1{
+    background: url("img/个人.png");
+    background-repeat:no-repeat;
+}
+ul #li2{
+    background: url("img/相册.png");
+    background-repeat:no-repeat;
+}
+ul #li3{
+    background: url("img/音乐.png");
+    background-repeat:no-repeat;
+}
+ul #li4{
+    background: url("img/时钟.png");
+    background-repeat:no-repeat;
+}
+ul #li5{
+    background: url("img/灯泡.png");
+    background-repeat:no-repeat;
+}
+
+#menu{
+    float: left;
+    list-style: none;
+}
+#menu li{
+    /*margin-bottom: 2px;*/
+}
+.box{
+    float: right;
+    margin-right: 100px;
+}
+.box .d1{
+    width: 1000px;
+    height: 150px;
+    /*border: 1px solid gray;*/
+    font-family:"楷体";
+    font-size: 20px;
+}
+.box #time{
+    width: 400px;
+    height: auto;
+    /*border: 2px solid gray;*/
+    font-family:"楷体";
+    font-size: 40px;
+    text-shadow:5px 2px 6px #000;
+    padding:10px 0;
+    color:#FFF;
+}
+
+/**{*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+/*}*/
+.box1{
+    /*position: relative;*/
+    /*float: left;*/
+    width: 1500px;
+    height: auto;
+
+}
+.box1 img{
+    /*padding: 10px;*/
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    /*border-radius: 5px;*/
+    width: 200px;
+    height: 100px;
+}
+
+
