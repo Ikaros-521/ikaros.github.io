@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>导航</title>
+</head>
+<style>
+h1
+{text-shadow:0.1em 3px 7px white}
+p
+{text-shadow:0.1em 3px 7px white;
+font-size:large}
+.a
+{
+background-attachment:fixed;
+}
+</style>
+
+<body class=a background="电脑壁纸/《鸟笼》高清电脑壁纸.jpg">
+<div id="timetable" style="font-size:22px;color:#F09">
+Time
+</div>
+<h1 style="text-indent:5%">百度一下</h1>
+<p style="text-indent:5%">
+<a href="http://www.baidu.com/" target="_blank">www.baidu.com</a>
+</p>
+
+<h1 style="text-indent:10%">哔哩哔哩官网</h1>
+<p style="text-indent:10%">
+<a href="http://www.bilibili.com/" target="_blank">www.bilibili.com</a>
+</p>
+<h1 style="text-indent:5%">我的直播间</h1>
+<p style="text-indent:5%">
+<a href="http://live.bilibili.com/278333" target="_blank">http://live.bilibili.com/278333</a>
+</p>
+<h1 style="text-indent:10%">b站视频下载</h1>
+<p style="text-indent:10%">
+<a href="http://www.jijidown.com/" target="_blank">www.jijidown.com/</a>
+</p>
+<h1 style="text-indent:15%">D动漫1080P</h1>
+<p style="text-indent:15%">
+<a href="http://dm1080p.com/" target="_blank">http://dm1080p.com/</a>
+</p>
+<h1 style="text-indent:10%">D动漫zzz盘（下载）</h1>
+<p style="text-indent:10%">
+<a href="http://zzzpan.com/" target="_blank">http://zzzpan.com/</a>
+</p>
+<h1 style="text-indent:5%">1080P动漫壁纸</h1>
+<p style="text-indent:5%">
+<a href="http://bz1080p.com/" target="_blank">http://bz1080p.com/</a>
+</p>
+</p>
+<h1 style="text-indent:15%">百度翻译</h1>
+<p style="text-indent:15%">
+<a href="http://fanyi.baidu.com/" target="_blank">fanyi.baidu.com/</a>
+</p>
+<script language="javascript">
+  function get_time()
+  {
+    var date=new Date();
+    var year="",month="",day="",week="",hour="",minute="",second="";
+    year=date.getFullYear();
+    month=add_zero(date.getMonth()+1);
+    day=add_zero(date.getDate());
+    week=date.getDay();
+    switch (date.getDay()) {
+    case 0:val="周日";break
+    case 1:val="周一";break
+    case 2:val="周二";break
+    case 3:val="周三";break
+    case 4:val="周四";break
+    case 5:val="周五";break
+    case 6:val="周六";break
+      }
+    hour=add_zero(date.getHours());
+    minute=add_zero(date.getMinutes());
+    second=add_zero(date.getSeconds());
+    document.getElementById("timetable").innerHTML=" "+year+"-"+month+"-"+day+" "+hour+":"+minute+":"+second+" "+val;
+  }
+  function add_zero(temp)
+  {
+    if(temp<10) return "0"+temp;
+    else return temp;
+  }
+setInterval("get_time()",1000);
+</script>
+
+</body>
+</html>
