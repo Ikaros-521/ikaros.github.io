@@ -27,7 +27,7 @@ $(document).ready(function() {
     var clickNumber =0;
     $("#li5").click(function () {
         if(clickNumber %2==0){
-            $("body").css("background","url('img/黑.jpg')");
+            $("body").css("background","#000");
         }else{
             $("body").css("background","url('img/6.png')");
         }
