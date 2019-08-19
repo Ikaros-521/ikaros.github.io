@@ -27,12 +27,17 @@ $(document).ready(function() {
     var clickNumber =0;
     $("#li5").click(function () {
         if(clickNumber %2==0){
-            $("body").css("background","#000");
+            $("body").css("background","#000000");
         }else{
             $("body").css("background","url('img/6.png')");
         }
         clickNumber ++;
     });
+	$(".d6").hide();
+	$("#li6").click(function () {
+        $(".d6").toggle(2000);
+    });
+	
     var clicknum=0;
     $("#b").click(function(){
         if(clicknum==0){
@@ -62,8 +67,40 @@ $(document).ready(function() {
 
     $(window).on("load",function(){
         //imgLocation();
-        move();
         snow();
+		var layer1 = document.getElementById('layer1');
+        var sx = sy = 1;
+        var x = y = 0;
+ 
+        function move(){
+            if(document.documentElement.clientWidth - layer1.offsetWidth-1 < x || x < 0){
+                sx = -sx;
+            }
+ 
+            if(document.documentElement.clientHeight - layer1.offsetHeight-1 < y || y < 0){
+                sy = -sy;
+            }
+ 
+            x = layer1.offsetLeft + sx;
+            y = layer1.offsetTop + sy;
+ 
+            layer1.style.left = x + 'px';
+            layer1.style.top = y + 'px';
+        }
+ 
+        var timer = setInterval(move, 100);
+ 
+        layer1.onmouseover = function(){
+            clearInterval(timer);
+        }
+ 
+        layer1.onmouseout = function(){
+            timer = setInterval(move, 100);
+        }
+	});
+	
+	$("#navbar").click(function () {
+        window.open("http://ikaros-521.gitee.io/navbar/");
     });
 });
 
@@ -235,11 +272,13 @@ function full(n){
 }
 window.setInterval("showTime()",1000);
 
+/*闪现广告
 function move(){
     document.getElementById("layer1").style.left=Math.random()*1000+"px";
     document.getElementById("layer1").style.top=Math.random()*200+"px";
     setTimeout("move()",1000);
 }
+*/
 
 function snow() {
     //1、定义一片雪花模板
