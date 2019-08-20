@@ -37,6 +37,11 @@ $(document).ready(function() {
 	$("#li6").click(function () {
         $(".d6").toggle(2000);
     });
+	$(".d7").hide();
+	$("#img_eat").click(function () {
+        $(".d7").toggle(2000);
+    });
+	
 	
     var clicknum=0;
     $("#b").click(function(){
@@ -64,6 +69,7 @@ $(document).ready(function() {
         clicknum++;
 
     });
+
 
     $(window).on("load",function(){
         //imgLocation();
@@ -97,11 +103,34 @@ $(document).ready(function() {
         layer1.onmouseout = function(){
             timer = setInterval(move, 100);
         }
+		
+		// 透明度来回变换
+		var timer1 = setInterval(colorLiner,20);
+		var val = 100;
+		function colorLiner(){
+			var oDiv = document.getElementById('img_eat');
+			if(val >= 0)
+			{
+				oDiv.style.opacity = val/100;	
+			}
+			if(val < 0)
+			{
+				oDiv.style.opacity = -val/100;
+			}
+			if(val == -100)
+			{
+				val = -val;
+			}
+			val--;
+		}	
 	});
+	
 	
 	$("#navbar").click(function () {
         window.open("http://ikaros-521.gitee.io/navbar/");
     });
+	
+	
 });
 
 function imgplus(){
