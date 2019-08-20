@@ -1,4 +1,4 @@
-﻿String.prototype.render = function (context) {
+String.prototype.render = function (context) {
     var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
 
     return this.replace(tokenReg, function (word, slash1, token, slash2) {
@@ -38,8 +38,8 @@ $('#hitokoto').mouseover(function (){
 });
 
 $('.waifu-tool .fui-home').click(function (){
-    //window.location = 'https://www.fghrsh.net/';
-    window.location = window.location.protocol+'//'+window.location.hostname+'/'
+    window.location = 'https://ikaros-521.gitee.io/self.gitee.io/';
+    //window.location = window.location.protocol+'//'+window.location.hostname+'/'
 });
 
 $('.waifu-tool .fui-eye').click(function (){
@@ -56,7 +56,7 @@ $('.waifu-tool .fui-user').click(function (){
 });
 
 $('.waifu-tool .fui-info-circle').click(function (){
-    window.open('https://www.cnblogs.com/yjlblog/p/8724881.html');
+    window.open('https://www.cnblogs.com/ikaros-521/');
 });
 
 $('.waifu-tool .fui-cross').click(function (){
@@ -73,7 +73,7 @@ $('.waifu-tool .fui-photo').click(function (){
 
 function waifuWelcome(){
     var text;
-    var SiteIndexUrl = 'https://www.fghrsh.net/';  // 手动指定主页
+    var SiteIndexUrl = 'https://ikaros-521.gitee.io/self.gitee.io/';  // 手动指定主页
     //var SiteIndexUrl = window.location.protocol+'//'+window.location.hostname+'/';  // 自动获取主页
 
     if (window.location.href == SiteIndexUrl) {      // 如果是主页
