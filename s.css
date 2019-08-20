@@ -33,6 +33,18 @@ ul #li6{
     background-repeat:no-repeat;
 }
 
+#img_eat{
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+
+.d7{
+	position:absolute;
+	top:200px;
+	right:50px;
+}
+
 #menu{
     float: left;
     list-style: none;
