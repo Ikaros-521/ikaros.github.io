@@ -13,6 +13,8 @@
     <link href="s.css" type="text/css" rel="stylesheet">
     <link href="reset.min.css" type="text/css" rel="stylesheet">
     <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="2d/waifu1.css"/>
+    <link rel="stylesheet" type="text/css" href="2d/flat-ui.min1.css"/>
 </head>
 <body>
 <!--<div id="container">-->
@@ -70,5 +72,21 @@
 </div>
 <div id="navbar">
 </div>
+<div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+</div>
 </body>
+<script src="2d/waifu-tips.js"></script>
+<script src="2d/live2d.js"></script>
+<script type="text/javascript">initModel()</script>
 </html>
